@@ -1,7 +1,7 @@
 Jenkins EKS Pipeline
 ------------------
 
-This Jenkins pipeline uses    using Amazon CodeCommit for 
+This Jenkins pipeline deploys a web application in Amazon Elastic Kubernetes Service using CodeCommit for version control and Amazon ECR for container registry. 
 
 ![diagram](img/diagram1.png)
 
@@ -13,13 +13,14 @@ This Jenkins pipeline uses    using Amazon CodeCommit for
 4. Deploy application in Amazon EKS
 
 
-Requirements
+**Requirements
 
-	- Create ECR, CodeCommit and EKS (in the future add CloudFormation template for this)
-	 Two repositories in CodeCommit - one for application code other for Jenkins pipeline
-	- Create Credentials in Jenkins for ECR user, CodeCommit user and EKS 
-
-	- Create EKS Cluster in AWS and node groups
-	- Install kubectl to connect to AWS EKS cluster
-		○ Install kubect - l https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
-		○ Install AWS IAM authenticator- https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
+- Create two repositories in CodeCommit. One for the application code and the other one for the Jenkins pipeline
+- Create ECR registry
+- Create password credentials in Jenkins for ECR and CodeCommit
+  ![jenkins-credentials](img/jenkins_credentials.png)
+ - Create Jenkins pipeline and add the CodeCommit repository URL in the SCM section
+  ![jenkins-pipeline](img/jenkins_pipeline.png)
+- Create EKS Cluster in AWS and node groups
+- [Install kubectl on Jenkins machine to connect to AWS EKS cluster](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
+- [Install AWS IAM authenticator] (https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html)

@@ -3,7 +3,7 @@ Jenkins EKS Pipeline
 
 This Jenkins pipeline uses    using Amazon CodeCommit for 
 
-![diagram](img/diagram1.PNG)
+![diagram](img/diagram1.png)
 
 Jenkins Pipeline Steps
 

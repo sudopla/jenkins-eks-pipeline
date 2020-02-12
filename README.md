@@ -5,15 +5,12 @@ This Jenkins pipeline uses    using Amazon CodeCommit for
 
 ![diagram](img/diagram1.png)
 
-Jenkins Pipeline Steps
+######Jenkins Pipeline Steps
 
-	1. Download code from CodeCommit repository
-
-	2. Create container image
-
-	3. Push container image to Amazon ECR
-
-	4. Deploy application in Amazon EKS
+1. Download code from CodeCommit repository
+2. Create container image
+3. Push container image to Amazon ECR
+4. Deploy application in Amazon EKS
 
 
 Requirements

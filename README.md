@@ -4,6 +4,7 @@ Jenkins EKS Pipeline
 This Jenkins pipeline deploys a web application in Amazon Elastic Kubernetes Service using CodeCommit for version control and Amazon ECR for container registry. 
 
 ![diagram](img/diagram1.png)
+<img src="img/diagram1.png" width="40%">
 
 **Jenkins Pipeline Steps**
 

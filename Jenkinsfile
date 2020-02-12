@@ -8,7 +8,7 @@ pipeline {
         aws_keys_ecr=credentials('AWS_CREDENTIALS_ECR')
         aws_keys_eks=credentials('AWS_CREDENTIALS_EKS')
         aws_region='us-east-1'
-        eks_cluster_name=EKS_CLUSTER
+        eks_cluster_name='EKS_CLUSTER'
     }
     
     stages {

@@ -5,7 +5,7 @@ This Jenkins pipeline uses    using Amazon CodeCommit for
 
 ![diagram](img/diagram1.png)
 
-######Jenkins Pipeline Steps
+**Jenkins Pipeline Steps**
 
 1. Download code from CodeCommit repository
 2. Create container image

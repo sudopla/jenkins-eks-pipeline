@@ -20,10 +20,10 @@ Note - The pipeline does not have a test stage yet but you can implement it late
 - Create ECR registry
 - Create password credentials in Jenkins for CodeCommit, ECR and EKS
 
-  ![jenkins-credentials](img/jenkins_credentials.png)
+   ![jenkins-credentials](img/jenkins_credentials.png)
  - Create Jenkins pipeline and add the CodeCommit repository URL in the SCM section
  
-  ![jenkins-pipeline](img/jenkins_pipeline.png)
+   ![jenkins-pipeline](img/jenkins_pipeline.png)
 - Create EKS Cluster in AWS and node groups
 - [Install kubectl on Jenkins machine to connect to AWS EKS cluster](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
 - [Install AWS IAM authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html)

@@ -16,11 +16,13 @@ Note - The pipeline does not have a test stage yet but you can implement it late
 
 **Requirements**
 
-* Create two repositories in CodeCommit. One for the application code and the other one for the Jenkins pipeline
-* Create ECR registry
+- Create two repositories in CodeCommit. One for the application code and the other one for the Jenkins pipeline
+- Create ECR registry
 - Create password credentials in Jenkins for CodeCommit, ECR and EKS
+
   ![jenkins-credentials](img/jenkins_credentials.png)
  - Create Jenkins pipeline and add the CodeCommit repository URL in the SCM section
+ 
   ![jenkins-pipeline](img/jenkins_pipeline.png)
 - Create EKS Cluster in AWS and node groups
 - [Install kubectl on Jenkins machine to connect to AWS EKS cluster](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
@@ -28,7 +30,7 @@ Note - The pipeline does not have a test stage yet but you can implement it late
 
 **Jenkinsfile**
 
-Before running the pipeline you will have to change some of the values in the environment variables. Update the CodeCommit repository and ECR registry address. Also, make sure that the names of the Jenkins credentials and the EKS cluster are correct.  
+Before running the pipeline you will have to change the value of some of the environment variables in the [Jenkinsfile](Jenkinsfile). Update the CodeCommit repository and ECR registry address. Also, make sure that the names of the Jenkins credentials and the EKS cluster are correct.  
 ```
  environment {
         codecommit_login = credentials('CodeCommit_Credentials')
@@ -40,4 +42,20 @@ Before running the pipeline you will have to change some of the values in the en
         eks_cluster_name='EKS_CLUSTER'
     }
 ```
+
+**Kubernetes Objects**
+
+You can find the Kubernetes deployment and service inside the deploy folder - [aws_app_deployment.yml](deploy/aws_app_deployment.yml) [loadbalancer_aws_app.yml](deploy/loadbalancer_aws_app.yml)
+
+
+**Application Code**
+
+You could use the AWS dashboard application in my [django-aws-app-container](https://github.com/sudopla/django-aws-app-container) repository to test this pipeline. Upload the code to CodeCommit and then specify the address in the Jenkinsfile as showed before.
+
+If you want to run a different applicaitont then you will have to add the new Dockerfile and other required files to the following folder [jenkins-eks-pipeline/build/container](jenkins-eks-pipeline/build/container)
+
+
+
+
+
 

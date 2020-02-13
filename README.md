@@ -52,7 +52,7 @@ You can find the Kubernetes deployment and service inside the deploy folder - [a
 
 **Application Code**
 
-You could use the AWS dashboard application in my [django-aws-app-container](https://github.com/sudopla/django-aws-app-container/tree/master/app_code) repository to test this pipeline. Upload the code to CodeCommit and then specify the address in the Jenkinsfile as showed before.
+You could use the AWS dashboard application in my [django-aws-app-container](https://github.com/sudopla/django-aws-app-container) repository to test this pipeline. Upload the code to CodeCommit and then specify the address in the Jenkinsfile as showed before.
 
 If you want to run a different applicaitont then you will have to add the new Dockerfile and other required files to the following folder [jenkins-eks-pipeline/build/container](build/container)
 
